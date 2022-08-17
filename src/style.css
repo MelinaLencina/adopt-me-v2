@@ -251,6 +251,15 @@ header {
   margin-right: 15px;
 }
 
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 400px;
+  margin-top: 8px;
+}
+
 @media only screen and (max-width: 1129px) {
   header {
     display: flex;
@@ -302,6 +311,11 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  .loading{
+  font-size: 2rem;
+}
+
 }
 
 @media only screen and (max-width: 945px) {
@@ -312,6 +326,11 @@ header {
   .search {
     width: 100%;
   }
+
+  .loading{
+  font-size: 1.3rem;
+}
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -332,4 +351,9 @@ header {
     width: 60px;
     height: 60px;
   }
+
+    .loading{
+  font-size: 1rem;
+}
+
 }
