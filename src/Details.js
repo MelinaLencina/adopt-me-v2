@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { useParams } from "react-router-dom";
+import ThemeContext from "./ThemeContext";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 
@@ -27,7 +28,11 @@ const { animal, breed, city, state, description, name, images } = this.state;
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} — ${breed} — ${city}, ${state}`}</h2>
-          <button>Adopt {name}</button>
+          <ThemeContext.Consumer>
+            {([theme]) => (
+              <button style={{ backgroundColor: theme }}>Adopt {name}</button>
+            )}
+          </ThemeContext.Consumer>
           <p>{description}</p>
         </div>
       </div>
