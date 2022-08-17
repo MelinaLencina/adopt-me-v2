@@ -65,5 +65,4 @@ const breeds = [];
     </div>
   );
 };
-
 export default SearchParams;
